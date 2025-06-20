@@ -20,8 +20,6 @@ app.use(session({
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-// add path to dog routes
-app.use('/api/owners', dogRoutes);
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
