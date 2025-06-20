@@ -4,8 +4,8 @@ async function logout() {
     try {
         const response = await fetch('/api/users/logout', {
             method: 'POST',
-            headers
-        })
+            credentials: 'include'
+        });
     } catch(e) {
 
     }
