@@ -11,10 +11,10 @@ async function logout() {
 
         if (!response.ok) return new Error(result.error || 'Logout failed');
 
-        alert('Logged out!');
+        console.log('Logged out!');
         window.location.href = '/';
-        
-    } catch (e) {
 
+    } catch (e) {
+        console.error()
     }
 }
