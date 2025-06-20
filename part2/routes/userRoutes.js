@@ -53,7 +53,9 @@ router.post('/login', async (req, res) => {
     // check role and direct to the corresponding dashboard
     if (rows.role === 'owner'){
 
-    }e
+    }else if(rows.role==='walker'){
+      
+    }
 
 
     res.json({ message: 'Login successful', user: rows[0] });
