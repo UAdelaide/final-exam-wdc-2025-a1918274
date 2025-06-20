@@ -52,7 +52,9 @@
 
             const result = await resposne.json();
 
-            if(!response.ok)
+            if(!response.ok){
+              throw
+            }
           }
         }
       }
