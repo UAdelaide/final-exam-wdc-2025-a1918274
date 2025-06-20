@@ -9,7 +9,7 @@ async function logout() {
 
         const result = await response.json();
 
-        if (!response.ok) return new Error(result.error || 'Logout failed');
+        if (!response.ok) throw new Error(result.error || 'Logout failed');
 
         console.log('Logged out!');
         window.location.href = '/';
