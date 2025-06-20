@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () => {
 
-})
-const logoutBtn = document.getElementById('logoutBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
 
-async function logout() {
+    async function logout() {
     try {
         const response = await fetch('/api/users/logout', {
             method: 'POST',
@@ -12,12 +11,13 @@ async function logout() {
 
         const result = await response.json();
 
-        if (!response.ok) throw new Error(result.error || 'Logout failed');
+        if(!response.ok) throw new Error(result.error || 'Logout failed');
 
-        console.log('Logged out!');
-        window.location.href = '/';
+console.log('Logged out!');
+window.location.href = '/';
 
     } catch (e) {
-        console.error('error for log out:', e);
-    }
+    console.error('error for log out:', e);
 }
+
+})
