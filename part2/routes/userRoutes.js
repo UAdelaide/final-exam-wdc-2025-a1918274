@@ -49,15 +49,6 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // part 2: login form
-    // check role and direct to the corresponding dashboard
-    if (rows.role === 'owner'){
-
-    }else if(rows.role==='walker'){
-      
-    }
-
-
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
