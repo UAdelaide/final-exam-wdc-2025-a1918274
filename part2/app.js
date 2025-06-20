@@ -21,7 +21,8 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 // add path to dog routes
-app.use()
+
+app.use('/api/dogs', dogRoutes);
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
