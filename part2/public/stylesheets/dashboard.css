@@ -1,9 +1,9 @@
 #logout-btn {
     background-color: red;
-    float: left;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #header{
     display: flex;
-    /* justify-content: center; */
 }
