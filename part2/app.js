@@ -9,7 +9,9 @@ const app = express();
 app.use(express.json());
 
 // session middleware
-app.use(session)
+app.use(session({
+    secret: 'part2exam'
+}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
