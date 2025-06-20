@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');
+const session = require('express-session'); // for session handling
 const path = require('path');
 require('dotenv').config();
 
@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 
 // session middleware
+app.use(session)
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
