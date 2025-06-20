@@ -11,9 +11,11 @@ app.use(express.json());
 // session middleware
 app.use(session({
     secret: 'part2exam',
-    resave:false,
-    saveUninitialized:false
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
 }));
+
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
