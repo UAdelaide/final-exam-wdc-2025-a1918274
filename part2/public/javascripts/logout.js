@@ -1,1 +1,3 @@
-const logoutBtn = document.
+const logoutBtn = document.getElementById('logoutBtn');
+
+async 
