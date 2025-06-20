@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const logoutBtn = document.getElementById('logoutBtn');
-    if(logourbtn)
+    if(logoutBtn){
+        logoutBtn.addEventListener('click')
+    }
     async function logout() {
     try {
         const response = await fetch('/api/users/logout', {
