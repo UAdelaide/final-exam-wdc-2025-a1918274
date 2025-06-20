@@ -31,7 +31,7 @@ let db;
 // Route to return dogs as JSON
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.execute('SELECT name,  FROM Dogs');
+    const [dogs] = await db.execute('SELECT d. FROM Dogs d JOIN Users.u');
     res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
