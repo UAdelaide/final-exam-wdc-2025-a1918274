@@ -52,15 +52,17 @@
 
             const result = await response.json();
 
-            if(!response.ok){
+            if (!response.ok) {
               throw new Error(`HTTP ${response.status}: ${response.statusText}`);
               return;
             }
 
-            if(result.role === 'owner'){
+            if (result.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
-            }else if(result.role==='walker'){
-              window.location.href=
+            } else if (result.role === 'walker') {
+              window.location.href = '/walker-dashboard.html';
+            } else {
+              window.location.href = '/';
             }
           }
         }
