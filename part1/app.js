@@ -38,6 +38,16 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
+// Route to return dogs as JSON
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
+    res.json(dogs);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+});
+
 
 
 app.use(express.static(path.join(__dirname, 'public')));
