@@ -13,6 +13,6 @@ async function logout() {
         window.location.href = '/';
 
     } catch (e) {
-        console.error('error for log out:', e);
+        alert('error for log out:', e);
     }
 }
