@@ -1,4 +1,5 @@
 .logout-btn{
     background-color: transparent;
-    color: light
+    color: lightcoral;
+    border: 1px solid red;
 }
