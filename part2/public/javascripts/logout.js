@@ -12,8 +12,8 @@ async function logout() {
         if (!response.ok) throw new Error(result.error || 'Logout failed');
 
         alert('Logged out!');
+        // logged out, back to home page
         window.location.href = '/';
-
     } catch (e) {
         console.error('error for log out:', e);
     }
