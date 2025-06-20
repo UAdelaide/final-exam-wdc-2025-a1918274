@@ -56,7 +56,6 @@
 
             if (!response.ok) {
               throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-              return;
             }
 
             if (result.role === 'owner') {
