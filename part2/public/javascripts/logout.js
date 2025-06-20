@@ -1,4 +1,6 @@
-document.addEventListener('')
+document.addEventListener('DOMContentLoaded',()=>{
+    
+})
 const logoutBtn = document.getElementById('logoutBtn');
 
 async function logout() {
