@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const logoutBtn = document.getElementById('logoutBtn');
     if(logoutBtn){
-        logoutBtn.addEventListener('click')
+        logoutBtn.addEventListener('click', async () => {})
     }
     async function logout() {
     try {
