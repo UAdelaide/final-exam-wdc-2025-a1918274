@@ -9,11 +9,12 @@ async function logout() {
 
         const result = await response.json();
 
-        if(!response.ok) return new Error(result.error || 'Logout failed');
+        if (!response.ok) return new Error(result.error || 'Logout failed');
 
         alert('Logged out!');
-        window.location.h
-    } catch(e) {
+        window.location.href = '/';
+        
+    } catch (e) {
 
     }
 }
