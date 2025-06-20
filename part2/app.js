@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, '/public')));
 // session middleware
 app.use(session({
     secret: 'part2exam',
@@ -15,8 +15,6 @@ app.use(session({
     saveUninitialized: false,
     cookie: { secure: false }
 }));
-
-app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
