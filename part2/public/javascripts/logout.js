@@ -1,5 +1,7 @@
+// asynchronous log out function to call logout route
 async function logout() {
     try {
+        // send POST request
         const response = await fetch('/api/users/logout', {
             method: 'POST',
             credentials: 'include'
