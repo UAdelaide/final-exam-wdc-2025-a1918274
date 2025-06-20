@@ -6,6 +6,7 @@
     color: red;
     border: 1px solid red;
     transition: background-color 0.3s;
+    z-index: 1000;
 }
 
 .logout-btn:hover {
