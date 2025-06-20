@@ -61,8 +61,10 @@
 
             if (result.user.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
+              this.loggedIn = true;
             } else if (result.user.role === 'walker') {
               window.location.href = '/walker-dashboard.html';
+              this.loggedIn = true;
             } else {
               console.error('Unknown role:', result.user.role);
               alert('Login error!');
