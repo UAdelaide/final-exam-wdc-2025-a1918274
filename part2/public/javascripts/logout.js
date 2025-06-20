@@ -6,6 +6,8 @@ async function logout() {
             method: 'POST',
             credentials: 'include'
         });
+
+        const result = await response.json();
     } catch(e) {
 
     }
