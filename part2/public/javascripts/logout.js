@@ -9,7 +9,7 @@ async function logout() {
 
         if (!response.ok) throw new Error(result.error || 'Logout failed');
 
-        console.log('Logged out!');
+        alert('Logged out!');
         window.location.href = '/';
 
     } catch (e) {
