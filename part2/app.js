@@ -10,7 +10,9 @@ app.use(express.json());
 
 // session middleware
 app.use(session({
-    secret: 'part2exam'
+    secret: 'part2exam',
+    resave:false,
+    saveUninitialized:false
 }));
 app.use(express.static(path.join(__dirname, '/public')));
 
