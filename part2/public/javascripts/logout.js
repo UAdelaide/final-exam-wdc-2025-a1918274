@@ -11,7 +11,6 @@ async function logout() {
 
         alert('Logged out!');
         window.location.href = '/';
-
     } catch (e) {
         alert('error for log out:', e);
     }
