@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
 
     // part 2: login form
-    // if 
+    // check role and direct t
 
 
     res.json({ message: 'Login successful', user: rows[0] });
