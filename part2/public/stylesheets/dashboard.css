@@ -1,5 +1,6 @@
 .logout-btn{
     background-color: transparent;
-    color: lightcoral;
+    color: red;
     border: 1px solid red;
+    transition: background-color 
 }
