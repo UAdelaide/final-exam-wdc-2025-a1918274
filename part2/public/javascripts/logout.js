@@ -1,3 +1,9 @@
 const logoutBtn = document.getElementById('logoutBtn');
 
-async 
+async function logout() {
+    try {
+
+    } catch {
+
+    }
+}
