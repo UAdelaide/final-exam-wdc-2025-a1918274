@@ -11,7 +11,8 @@ async function logout() {
 
         if(!response.ok) return new Error(result.error || 'Logout failed');
 
-        
+        alert('Logged out!');
+        window.location.h
     } catch(e) {
 
     }
