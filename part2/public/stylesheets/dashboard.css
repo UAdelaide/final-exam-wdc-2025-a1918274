@@ -2,5 +2,9 @@
     background-color: transparent;
     color: red;
     border: 1px solid red;
-    transition: background-color 
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: red;
 }
