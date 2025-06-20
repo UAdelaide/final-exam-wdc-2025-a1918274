@@ -50,12 +50,14 @@
               body: JSON.stringify({ username, password })
             });
 
-            const result = await resposne.json();
+            const result = await response.json();
 
             if(!response.ok){
               throw new Error(`HTTP ${response.status}: ${response.statusText}`);
               return;
             }
+
+            if(result.role === 'owner')
           }
         }
       }
