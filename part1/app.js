@@ -41,7 +41,7 @@ app.get('/api/dogs', async (req, res) => {
 // Route to return open walkrequests as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [requests] = await db.execute('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
+    const [requests] = await db.execute('SELECT ');
     res.json(requests);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch requests' });
