@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 // route to post owner's dog for owner dashboard (question 15)
 router.post('/mydog', async (req, res) => {
-if()
+if(!req.session.user || !req.session.user.role !== '')
 });
 
 module.exports = router;
