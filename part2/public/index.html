@@ -43,7 +43,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for=""
+          <!-- v for to loop through dog array -->
+          <tr v-for="dog in dogs" :key="dog.dog_id"
         </tbody>
       </table>
     </div>
