@@ -39,7 +39,7 @@
         <p><em>Click to see the dog of the day!</em></p>
         <button type="button" @click="showButton = true">Dog of the day!</button>
         <br><br>
-        <button type="button" @click="showInfo = true" v-if="showButton"></button>
+        <button type="button" @click="showInfo = true" v-if="showButton">About</button>
 
         <!-- show info if true -->
         <div id="dogInfo" v-if="showInfo">
@@ -98,7 +98,7 @@
             singing dog to be feral Canis familiaris. Therefore, it did not assess them for the IUCN Red List of
             threatened species.[17]
         </div>
-        <button type="button" @click="getDog()" v-if="showInfo">Get Dog</button>
+        <button type="button" @click="getDog()" v-if="showInfo">Dog</button>
         <img :src="dog" alt="" />
         <!-- no alt for image -->
     </div>
