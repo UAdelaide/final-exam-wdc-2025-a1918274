@@ -6,6 +6,7 @@ const db = require('../models/db');
 router.get('/', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT Dogs.dog_id, Dogs.name AS dog_name, Dogs.size, Dogs.owner_id, Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
+    // specifically added dog id and owner id for question 17
     res.json(dogs);
   } catch (error) {
     console.error('SQL Error:', error);
