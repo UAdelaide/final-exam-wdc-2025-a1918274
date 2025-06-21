@@ -71,6 +71,7 @@
         async function getCurrentUser(){
           try{
             const response = await fetch('/api/users/me'); // get request
+            if(!response.ok) throw new Error('Failed to get current user');
             
           }
         }
