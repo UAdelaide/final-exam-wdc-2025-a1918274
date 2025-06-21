@@ -29,8 +29,8 @@ router.post('/mydog', async (req, res) => {
     );
     res.json(rows);
   } catch (e) {
-    console.error('SQL Error:', error);
-    res.status(500).json({ error: 'Failed to fetch owner's dogs" });
+    console.error('SQL Error:', e);
+    res.status(500).json({ error: "Failed to fetch owner's dogs" });
   }
 });
 
