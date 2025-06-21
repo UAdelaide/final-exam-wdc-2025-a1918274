@@ -24,7 +24,7 @@ router.post('/mydog', async (req, res) => {
   // connect to db
   try {
     const [rows] = await db.execute(
-      'SELECT '
+      'SELECT name, dog_id FROM Dogs WHERE owner_id = ?'
     )
   } catch (e) {
 
