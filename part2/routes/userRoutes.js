@@ -70,7 +70,7 @@ router.post('/logout', (req, res) => {
     }
 
     // clear cookie
-    res.clearCookie
+    res.clearCookie('connect.sid'); // default cookie
     return res.json({ message: 'Logged out successfully' });
   });
 });
