@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // route to post owner's dog for owner dashboard (question 15)
-router.post('/mydog', async (req, res) => {
+router.get('/mydog', async (req, res) => {
   if (!req.session.user || !req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'not authorised' });
   }
