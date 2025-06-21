@@ -13,7 +13,10 @@ app.use(session({
     secret: 'part2exam',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }
+    cookie: {
+        httpOnly: true,
+        secure: false
+    }
 }));
 
 // Routes
