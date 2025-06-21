@@ -118,7 +118,7 @@
         // modify to load owner's walk request only
         async function loadWalks() {
           try {
-            const res = await fetch('/api/walks/mywalkrequest');
+            const res = await fetch('/api/walks/mywalkrequests');
             if(!res.ok) throw new Error('Failed to load my walk requests');
             walks.value = await res.json();
           } catch (err) {
