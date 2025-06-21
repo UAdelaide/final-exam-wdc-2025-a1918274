@@ -25,7 +25,7 @@ router.get('/mywalkrequests', async (req, res) => {
   }
 
   const ownerID = req.session.user.user_id;
-  
+
   try {
     const [rows] = await db.query(`
       SELECT wr.*, d.name AS dog_name, d.size, u.username AS owner_name
@@ -33,7 +33,7 @@ router.get('/mywalkrequests', async (req, res) => {
       JOIN Dogs d ON wr.dog_id = d.dog_id
       JOIN Users u ON d.owner_id = u.user_id
       WHERE wr.status = 'open' AND d.owner_id = ?
-    `, [user_id]);
+    `, [ownerID]);
     res.json(rows);
   } catch (error) {
     console.error('SQL Error:', error);
