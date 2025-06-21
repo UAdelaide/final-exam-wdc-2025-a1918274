@@ -83,7 +83,9 @@
         // load dogs api
         async loadDogs(){
           try{
-            const response = await fetch('/api/dogs')
+            const response = await fetch('/api/dogs');
+            if(!response.ok) throw new Error('Error fetching dogs');
+            const result 
           }
         }
       }
