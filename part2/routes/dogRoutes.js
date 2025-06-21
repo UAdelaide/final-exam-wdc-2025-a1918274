@@ -29,7 +29,7 @@ router.post('/mydog', async (req, res) => {
     );
     res.json(rows);
   } catch (e) {
-    console.log('')
+    console.log('Falied')
 
   }
 });
