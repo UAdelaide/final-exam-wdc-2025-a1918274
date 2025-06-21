@@ -5,7 +5,7 @@ const db = require('../models/db');
 // Route to return dogs as JSON (admin/testing)
 router.get('/', async (req, res) => {
   try {
-    const [dogs] = await db.query('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
+    const [dogs] = await db.execute('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
     res.json(dogs);
   } catch (error) {
     console.error('SQL Error:', error);
@@ -24,7 +24,7 @@ router.post('/mydog', async (req, res) => {
   // connect to db
   try {
     const [rows] = await db.query(
-      
+
     )
   } catch (e) {
 
