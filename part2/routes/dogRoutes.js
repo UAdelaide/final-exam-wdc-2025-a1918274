@@ -23,7 +23,9 @@ router.post('/mydog', async (req, res) => {
 
   // connect to db
   try {
-    const [rows] = 
+    const [rows] = await db.query(
+      
+    )
   } catch (e) {
 
   }
