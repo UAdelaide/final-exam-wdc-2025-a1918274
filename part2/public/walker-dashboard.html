@@ -10,7 +10,7 @@
   <!-- adding logout javascripts -->
   <script src="/javascripts/logout.js" defer></script>
   <!-- css for logout button -->
-   <link rel="stylesheet" href="/stylesheets/dashboard.css">
+  <link rel="stylesheet" href="/stylesheets/dashboard.css">
 </head>
 
 <body class="bg-light">
@@ -68,16 +68,18 @@
 
         // part 2 question 16
         // get current user function to call /api/users/me
-        async function getCurrentUser(){
-          try{
+        async function getCurrentUser() {
+          try {
             const response = await fetch('/api/users/me'); // get request
-            if(!response.ok) throw new Error('Failed to get current user');
+            if (!response.ok) throw new Error('Failed to get current user');
             return await response.json();
-          }catch(e){
-            console.error('Error getting current user:')
+          } catch (e) {
+            console.error('Error getting current user:', e);
+            return null;
           }
         }
 
+        // modify 
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
