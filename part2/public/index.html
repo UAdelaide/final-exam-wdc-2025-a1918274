@@ -41,7 +41,7 @@
       data() {
         return {
           message: 'Welcome to the Dog Walking Service!',
-          
+
         };
       },
       methods: {
@@ -68,7 +68,6 @@
 
             if (result.user.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
-              this.loggedIn = true;
             } else if (result.user.role === 'walker') {
               window.location.href = '/walker-dashboard.html';
               this.loggedIn = true;
