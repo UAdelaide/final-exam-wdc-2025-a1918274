@@ -46,6 +46,7 @@
           <!-- v for to loop through dog array -->
           <tr v-for="dog in dogs" :key="dog.dog_id">
             <td>{{ dog.dog_id }}</td>
+            <td>{{ dog.name }}</td>
             <td><img :src="dog.photo" alt="dog photo" style="width: 100px;"></td>
           </tr>
         </tbody>
