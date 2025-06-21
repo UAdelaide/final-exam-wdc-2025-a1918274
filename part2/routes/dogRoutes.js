@@ -14,7 +14,9 @@ router.get('/', async (req, res) => {
 });
 
 // route to post owner's dog for owner dashboard (question 15)
-router.post('/')
+router.post('/mydog', async (req,res)=>{
+
+});
 
 module.exports = router;
 
