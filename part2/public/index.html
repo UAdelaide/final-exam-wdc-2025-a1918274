@@ -81,10 +81,10 @@
         },
 
         // load dogs api
-        async loadDogs(){
-          try{
+        async loadDogs() {
+          try {
             const response = await fetch('/api/dogs');
-            if(!response.ok) throw new Error('Error fetching dogs');
+            if (!response.ok) throw new Error('Error fetching dogs');
             const result = await response.json();
 
             // get image from dogs.ceo
@@ -95,8 +95,8 @@
             }
 
             this.dog = result;
-          }catch(e){
-            console.error('Failed to get dogs:')
+          } catch (e) {
+            console.error('Failed to get dogs:', e);
           }
         }
       }
