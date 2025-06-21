@@ -33,9 +33,9 @@
     <div id="app">
         <h1>Welcome to the Dog Planet!</h1>
         <p><em>Click about for all you want!</em></p>
-        <button type="button" onclick="showButton = true">About</button>
+        <button type="button" @click="showButton = true">About</button>
 
-        <button type="button" onclick="showInfo = true" v-if="showButton">Get information</button>
+        <button type="button" @click="showInfo = true" v-if="showButton">Get information</button>
 
         <!-- show info if true -->
         <div v-if="showInfo">
