@@ -82,7 +82,9 @@
 
         // load dogs api
         async loadDogs(){
-          
+          try{
+            const response = await fetch('/api/dogs')
+          }
         }
       }
     }).mount('#app');
