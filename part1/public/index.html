@@ -35,7 +35,7 @@
         <p><em>Click about for all you want!</em></p>
         <button type="button" onclick="showButton = true">About</button>
 
-        <button type="button" onclick="" v-if="showButton">Get information</button>
+        <button type="button" onclick="showInfo = true" v-if="showButton">Get information</button>
 
 
     </div>
@@ -49,7 +49,8 @@
             data() {
                 return {
                     dog: '',
-                    showButton: false
+                    showButton: false,
+                    showInfo: false,
                 }
             },
             methods: {
