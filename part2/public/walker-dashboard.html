@@ -85,7 +85,10 @@
           try {
             // call get current user
             const currentUser = await getCurrentUser();
-            if(!currentUser || !currentUser.user_id)
+            if(!currentUser || !currentUser.user_id){
+              throw new Error('Not logged in');
+            }
+            
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
