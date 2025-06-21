@@ -94,7 +94,9 @@
               dog.photo = image.message;
             }
 
-            this.dog = 
+            this.dog = result;
+          }catch(e){
+            console.error('Failed to get dogs:')
           }
         }
       }
