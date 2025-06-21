@@ -20,6 +20,12 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/mywalkrequests', async (req, res) => {
+  if (!req.session.user || req.session.user.role !== 'owner') {
+    return res.status(403).json({ error: 'not authorised' });
+  }
+
+  const ownerID = req.session.user.user_id;
+  
   try {
     const [rows] = await db.query(`
       SELECT wr.*, d.name AS dog_name, d.size, u.username AS owner_name
