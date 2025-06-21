@@ -111,7 +111,7 @@
             dogs.value = await res.json();
           } catch (e) {
             error.value = 'Failed to load dogs';
-            console.error(err);
+            console.error(e);
           }
         }
 
