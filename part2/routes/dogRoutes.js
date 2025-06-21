@@ -27,7 +27,9 @@ router.post('/mydog', async (req, res) => {
       'SELECT name, dog_id FROM Dogs WHERE owner_id = ?',
       [ownerID]
     );
+    res.json(rows);
   } catch (e) {
+    console.log('')
 
   }
 });
