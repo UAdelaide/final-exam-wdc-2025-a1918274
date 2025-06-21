@@ -21,7 +21,12 @@ router.post('/mydog', async (req, res) => {
 
   const ownerID = req.session.user.user_id;
 
-  // 
+  // connect to db
+  try {
+    const [rows] = 
+  } catch (e) {
+
+  }
 });
 
 module.exports = router;
