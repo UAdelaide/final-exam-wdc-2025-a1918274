@@ -73,6 +73,7 @@
             const response = await fetch('/api/users/me'); // get request
             if (!response.ok) throw new Error('Failed to get current user');
             return await response.json();
+            // will return 
           } catch (e) {
             console.error('Error getting current user:', e);
             return null;
